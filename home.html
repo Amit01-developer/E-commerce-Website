@@ -1,121 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important for responsiveness -->
     <style>  
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
- background: linear-gradient(to bottom, green,seagreen);
-}
+        * {
+            box-sizing: border-box;
+        }
 
-header {
-    background-color: #444;
-    color:white;
-    font-family: cursive;
-    padding: 10px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 96%;
-}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, green, seagreen);
+        }
 
-header h1 {
-    margin: 0px;
-    font-size: 3rem;
-}
-header p {
-    color: #ccc;
-    font-size: 2rem;
-    transition: background 0.3s;   
-}
+        header {
+            background-color: #444;
+            color: white;
+            font-family: cursive;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-main {
-    padding: 20px;
-    text-align: center;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
-main h1 {
-    margin-bottom: 20px;
+        header p {
+            color: #ccc;
+            font-size: 1.5rem;
+            transition: background 0.3s;
+            margin: 0;
+        }
+.back-button {
+    background-color: #28a745;
     color: white;
-    font-size: 60px;
-    font-family: cursive;
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 100px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.category-card {
-    border: 5px solid #ccc;
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-    background-color: lightgray;
-    transition: transform 0.3s;
-}
-
-.category-card:hover {
-    transform: scale(1.15);
-}
-
-.category-card img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #444;
-    color:white;
-    text-align: center;
     padding: 10px 20px;
-    position: relative;
-    width: 100%;
-   
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
 }
+
+.back-button:hover {
+    background-color: #218838;
+}
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h1 {
+            margin-bottom: 20px;
+            color: white;
+            font-size: 2.5rem;
+            font-family: cursive;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            border: 3px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: lightgray;
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: scale(1.1);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .category-card h2 {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 1.2rem;
+            }
+
+            main h1 {
+                font-size: 2rem;
+            }
+
+            .category-card h2 {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Bookstagram</h1>
-    <a href="main.html"><p>Back</p></a>
+        <a href="main.html" class="back-button">Back</a>
     </header>
     <main>
         <h1>Shop by Category</h1>
         <br><br>
         <div class="category-grid">
-     <div class="category-card">
-   <img src="./image/images (2).jpeg" alt="Electronics">
-        <h2>NOVELS</h2>
-        </div>
-      <div class="category-card">
-         <img src="./image/images.jpeg" alt="Clothing">
-           <h2>MAGAZINE</h2>
+            <div class="category-card">
+                <img src="novels.jpeg" alt="Novels">
+                <h2>NOVELS</h2>
             </div>
-      <div class="category-card">
-        <img src="./image/Academics-Badge (1).png" alt="Home Appliances">
-         <h2>ACADEMIC</h2>
+            <div class="category-card">
+                <img src="magazine.jpeg" alt="Magazine">
+                <h2>MAGAZINE</h2>
             </div>
-   <div class="category-card">
-      <img src="./image/images (1).jpeg" alt="Books">
-         <h2> PICTURE BOOKS</h2>
+            <div class="category-card">
+                <img src="Academics-Badge (1).png" alt="Academic">
+                <h2>ACADEMIC</h2>
             </div>
-<div class="category-card">
-    <img src="image/images (3).jpeg" alt="Toys">
-         <h2>BIOGRAPHY</h2>
+            <div class="category-card">
+                <img src="picture.jpeg" alt="Picture Books">
+                <h2>PICTURE BOOKS</h2>
             </div>
-  <div class="category-card">
-      <img src="./image/images (4).jpeg" alt="Groceries">
-       <h2>FANTASY</h2>
+            <div class="category-card">
+                <img src="biography.jpeg" alt="Biography">
+                <h2>BIOGRAPHY</h2>
+            </div>
+            <div class="category-card">
+                <img src="fantasy.jpeg" alt="Fantasy">
+                <h2>FANTASY</h2>
             </div>
         </div>
     </main>
     <footer>
-     <p>&copy; 2024 Online Book Store. All rights reserved.</p>
+        <p>&copy; 2024 Online Book Store. All rights reserved.</p>
     </footer>
 </body>
 </html>

@@ -1,68 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My E-Commerce Store</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookstagram - Home</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: cursive;
             margin: 0;
-            padding: 0;
+            font-family: 'Segoe UI', cursive;
             background-color: #f4f4f4;
         }
+
         header {
-            
-            background: linear-gradient(to bottom, green,seagreen);
-            color: #fff;
-            padding: 10px 0;
+            background: linear-gradient(to right, seagreen, green);
+            color: white;
             text-align: center;
+            padding: 20px 10px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
         nav {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            background-color: #444;
-            padding: 10px;
-        }
-        nav button a {
-            color: rgb(0, 0, 0);
-            margin: 10px 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s;
-           }
-        nav button a:hover {
-            text-decoration: underline;
-            transform: scale(1.15);
-        }
-       
-        .container {
-            padding: 20px;
-        }
-        footer {
-            background: linear-gradient(to bottom, green,seagreen);
-            color: #fff;
-            text-align: center;
+            background-color: #333;
             padding: 10px 0;
-            position: fixed;
+            gap: 10px;
+        }
+
+        nav a {
+            background-color: #fff;
+            color: #333;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #4caf50;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .video-section {
+            max-width: 100%;
+            overflow: hidden;
+            margin: 20px auto;
+            padding: 0 10px;
+        }
+
+        video {
             width: 100%;
-            bottom: 0;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background: linear-gradient(to right, seagreen, green);
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+            margin-top: 30px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav a {
+                padding: 8px 15px;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Bookstagram</h1>
+        <h1>📚 Bookstagram</h1>
     </header>
+
     <nav>
-        <button><a href="home.html">Home</a></button>
-        <button><a href="product.html">Products</a></button>
-        <button><a href="account.html">Account</a></button>
-        <button><a href="contactus.html">Contact</a></button>
+        <a href="home.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="account.html">Account</a>
+        <a href="contactus.html">Contact</a>
     </nav>
-    <video width="100%" height="10%" controls autoplay loop >
-        <source src="4243590-hd_1920_1080_30fps.mp4" type="video/mp4">
+
+    <div class="video-section">
+    <video autoplay loop muted playsinline>
+        <source src="4243590-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
     </video>
+</div>
+
     <footer>
         <p>&copy; 2025 Online Book Store. All rights reserved.</p>
     </footer>
